@@ -1,0 +1,13 @@
+{
+  "site_package_search_strategy": "pep561",
+  "source_directories": [
+    "./project/langchain-ai__langchain"
+  ],
+  "taint_models_path": [
+    "./Taint_Propagation/taint",
+    "{folder}/source"
+  ],
+  "search_path": [
+    "./Taint_Propagation/stubs"
+  ]
+}
