@@ -1,3 +1,4 @@
 code/TaintP2X/project/
 code/TaintP2X/llm_validation_logs/
 __pycache__/
+.env
