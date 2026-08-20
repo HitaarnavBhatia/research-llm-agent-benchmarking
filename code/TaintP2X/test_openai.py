@@ -1,6 +1,9 @@
+import os
 import requests
+from dotenv import load_dotenv
 
-api_key = "sk-proj-... # REMOVED BEFORE UPLOAD"
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
 url = "https://api.openai.com/v1/chat/completions"
 payload = {
     "model": "gpt-5.4-mini",
