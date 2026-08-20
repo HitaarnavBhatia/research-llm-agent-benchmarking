@@ -1,0 +1,1122 @@
+{
+  "tool": "TaintP2X",
+  "cve": "CVE-2024-5826",
+  "primary_result": "POSSIBLE_MATCH",
+  "test_source": {
+    "repository": "vanna-ai/vanna",
+    "url": "https://github.com/vanna-ai/vanna",
+    "commit_hash": "7da87ccafc33e4fa03c1241b7aae373c1858a655"
+  },
+  "benchmark_identity": {
+    "repository": "vanna",
+    "version": "0.3.3",
+    "repository_match": true
+  },
+  "benchmark": {
+    "Scenario_ID": "SC-020",
+    "CVE_ID": "CVE-2024-5826",
+    "Repository": "vanna",
+    "Version": "0.3.3",
+    "Vulnerability Class1": "Code Injection",
+    "Vulnerability Class2": "Tool Misuse",
+    "CVSS_Score": "9.8",
+    "CVSS_Severity": "Critical",
+    "Vulnerability Description": "Vanna executed arbitrary Python code when answering specific types of queries.",
+    "Attack_Surface": "User query",
+    "LINK": "https://nvd.nist.gov/vuln/detail/CVE-2024-5826",
+    "Affected_Component": "Python execution engine",
+    "Sink location": "vanna.ask() to exec() in src/vanna/base/base.py",
+    "Patch/fix commit link": "https://github.com/vanna-ai/vanna/security/advisories/GHSA-rrp4-2xx3-mv29, GHSA-rrp4-2xx3-mv29, fixed in version 0.3.4",
+    "Expected_SafeBehaviour": "Vanna must sandbox or restrict code execution and must not pass LLM-generated code directly to exec() without validation. Vanna versions beyond 0.3.3 added restrictions on the Python execution path used for data analysis.",
+    "ObservedFailure/ Vulnerable behaviour": "Vanna is built around the idea of letting users ask data questions in plain language and receiving SQL query results. A less-documented feature was its ability to execute LLM-generated Python code for analysis tasks. Version 0.3.3 allowed this code to run through exec() with no restrictions, meaning a crafted natural-language request that triggered the Python analysis path rather than the SQL path could achieve arbitrary code execution on the machine running the Vanna instance."
+  },
+  "issue_count": 2,
+  "findings": [
+    {
+      "line_number": 2027,
+      "callable": "src.vanna.base.base.VannaBase.ask",
+      "callable_line": 1099,
+      "code": "5008",
+      "line": 1158,
+      "message": "Data from [LLMControlled] source(s) may reach [SQL] sink(s)",
+      "source": "name forward roots kinds features via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return length 1 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name zhipuai.ZhipuAI.chat.completions.create port leaf:return length 2 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6828 upper 6829 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6840 upper 6841 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6842 upper 6843 receiver_interval lower 6827 upper 6852 is_self_call True name backward roots kinds leaves name src.vanna.base.base.VannaBase.run_sql port leaf:sql kind SQL origin line 1158 start 30 end 33 caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True call_site 1158:17-1158:34",
+      "sink": "name forward roots kinds features via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return length 1 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name zhipuai.ZhipuAI.chat.completions.create port leaf:return length 2 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6828 upper 6829 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6840 upper 6841 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6842 upper 6843 receiver_interval lower 6827 upper 6852 is_self_call True name backward roots kinds leaves name src.vanna.base.base.VannaBase.run_sql port leaf:sql kind SQL origin line 1158 start 30 end 33 caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True call_site 1158:17-1158:34",
+      "raw": {
+        "kind": "issue",
+        "data": {
+          "callable": "src.vanna.base.base.VannaBase.ask",
+          "callable_line": 1099,
+          "code": 5008,
+          "line": 1158,
+          "start": 30,
+          "end": 33,
+          "filename": "project/vanna-ai__vanna/src/vanna/base/base.py",
+          "message": "Data from [LLMControlled] source(s) may reach [SQL] sink(s)",
+          "traces": [
+            {
+              "name": "forward",
+              "roots": [
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 1,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "zhipuai.ZhipuAI.chat.completions.create",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6828,
+                      "upper": 6829
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "zhipuai.ZhipuAI.chat.completions.create",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "mistralai.client.MistralClient.chat",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6840,
+                      "upper": 6841
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "always-via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "zhipuai.ZhipuAI.chat.completions.create",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "mistralai.client.MistralClient.chat",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6842,
+                      "upper": 6843
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                }
+              ]
+            },
+            {
+              "name": "backward",
+              "roots": [
+                {
+                  "kinds": [
+                    {
+                      "leaves": [
+                        {
+                          "name": "src.vanna.base.base.VannaBase.run_sql",
+                          "port": "leaf:sql"
+                        }
+                      ],
+                      "kind": "SQL"
+                    }
+                  ],
+                  "origin": {
+                    "line": 1158,
+                    "start": 30,
+                    "end": 33
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true,
+                  "call_site": "1158:17-1158:34"
+                }
+              ]
+            }
+          ],
+          "features": [
+            {
+              "has": "first-index"
+            },
+            {
+              "first-index": "<numeric>"
+            },
+            {
+              "has": "first-field"
+            },
+            {
+              "first-field": "choices"
+            },
+            {
+              "via": "obscure:model"
+            },
+            {
+              "always-via": "tito"
+            }
+          ],
+          "sink_handle": {
+            "kind": "Call",
+            "callee": "src.vanna.base.base.VannaBase.run_sql",
+            "index": 0,
+            "parameter": "formal(sql)"
+          },
+          "master_handle": "src.vanna.base.base.VannaBase.ask:5008:0:Call|src.vanna.base.base.VannaBase.run_sql|0|formal(sql):7bce204aef44bfc2aba15f8bf9c84d20"
+        }
+      }
+    },
+    {
+      "line_number": 2028,
+      "callable": "src.vanna.base.base.VannaBase.ask",
+      "callable_line": 1099,
+      "code": "5001",
+      "line": 1179,
+      "message": "User specified data may reach a code execution sink",
+      "source": "name forward roots kinds features via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return length 1 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name zhipuai.ZhipuAI.chat.completions.create port leaf:return length 2 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6828 upper 6829 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6840 upper 6841 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6842 upper 6843 receiver_interval lower 6827 upper 6852 is_self_call True kinds features always-via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return length 1 kind LLMControlled call position line 1174 start 34 end 34 resolves_to src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code src.vanna.base.base.VannaBase.generate_plotly_code port result caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name zhipuai.ZhipuAI.chat.completions.create port leaf:return length 2 kind LLMControlled call position line 1174 start 34 end 34 resolves_to src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code src.vanna.base.base.VannaBase.generate_plotly_code port result caller_interval lower 6828 upper 6829 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled call position line 1174 start 34 end 34 resolves_to src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code src.vanna.base.base.VannaBase.generate_plotly_code port result caller_interval lower 6840 upper 6841 receiver_interval lower 6827 upper 6852 is_self_call True name backward roots kinds leaves name exec port leaf:source length 1 kind RemoteCodeExecution call position line 1179 start 61 end 72 resolves_to src.vanna.base.base.VannaBase.get_plotly_figure port formal(plotly_code, position=1) call_site 1179:26-1179:80 caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True",
+      "sink": "name forward roots kinds features via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return length 1 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name zhipuai.ZhipuAI.chat.completions.create port leaf:return length 2 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6828 upper 6829 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6840 upper 6841 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return name zhipuai.ZhipuAI.chat.completions.create port leaf:return name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled local_features always-via obscure:model via format-string via model-shaping always-via tito-broadening always-via tito always-via broadening via model-tito-shaping via obscure:unknown-callee tito_positions line 1176 start 28 end 31 call position line 1135 start 18 end 54 resolves_to src.vanna.base.base.VannaBase.generate_sql src.vanna.mistral.mistral.Mistral.generate_sql src.vanna.ollama.ollama.Ollama.generate_sql port result caller_interval lower 6842 upper 6843 receiver_interval lower 6827 upper 6852 is_self_call True kinds features always-via obscure:model always-via tito leaves name src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt port leaf:return name src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt port leaf:return length 1 kind LLMControlled call position line 1174 start 34 end 34 resolves_to src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code src.vanna.base.base.VannaBase.generate_plotly_code port result caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name zhipuai.ZhipuAI.chat.completions.create port leaf:return length 2 kind LLMControlled call position line 1174 start 34 end 34 resolves_to src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code src.vanna.base.base.VannaBase.generate_plotly_code port result caller_interval lower 6828 upper 6829 receiver_interval lower 6827 upper 6852 is_self_call True kinds features has first-index first-index <numeric> has first-field first-field choices always-via obscure:model always-via tito leaves name mistralai.client.MistralClient.chat port leaf:return length 2 kind LLMControlled call position line 1174 start 34 end 34 resolves_to src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code src.vanna.base.base.VannaBase.generate_plotly_code port result caller_interval lower 6840 upper 6841 receiver_interval lower 6827 upper 6852 is_self_call True name backward roots kinds leaves name exec port leaf:source length 1 kind RemoteCodeExecution call position line 1179 start 61 end 72 resolves_to src.vanna.base.base.VannaBase.get_plotly_figure port formal(plotly_code, position=1) call_site 1179:26-1179:80 caller_interval lower 6827 upper 6852 receiver_interval lower 6827 upper 6852 is_self_call True",
+      "raw": {
+        "kind": "issue",
+        "data": {
+          "callable": "src.vanna.base.base.VannaBase.ask",
+          "callable_line": 1099,
+          "code": 5001,
+          "line": 1179,
+          "start": 61,
+          "end": 72,
+          "filename": "project/vanna-ai__vanna/src/vanna/base/base.py",
+          "message": "User specified data may reach a code execution sink",
+          "traces": [
+            {
+              "name": "forward",
+              "roots": [
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 1,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "local_features": [
+                    {
+                      "always-via": "obscure:model"
+                    },
+                    {
+                      "via": "format-string"
+                    },
+                    {
+                      "via": "model-shaping"
+                    },
+                    {
+                      "always-via": "tito-broadening"
+                    },
+                    {
+                      "always-via": "tito"
+                    },
+                    {
+                      "always-via": "broadening"
+                    },
+                    {
+                      "via": "model-tito-shaping"
+                    },
+                    {
+                      "via": "obscure:unknown-callee"
+                    }
+                  ],
+                  "tito_positions": [
+                    {
+                      "line": 1176,
+                      "start": 28,
+                      "end": 31
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "zhipuai.ZhipuAI.chat.completions.create",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "local_features": [
+                    {
+                      "always-via": "obscure:model"
+                    },
+                    {
+                      "via": "format-string"
+                    },
+                    {
+                      "via": "model-shaping"
+                    },
+                    {
+                      "always-via": "tito-broadening"
+                    },
+                    {
+                      "always-via": "tito"
+                    },
+                    {
+                      "always-via": "broadening"
+                    },
+                    {
+                      "via": "model-tito-shaping"
+                    },
+                    {
+                      "via": "obscure:unknown-callee"
+                    }
+                  ],
+                  "tito_positions": [
+                    {
+                      "line": 1176,
+                      "start": 28,
+                      "end": 31
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6828,
+                      "upper": 6829
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "zhipuai.ZhipuAI.chat.completions.create",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "mistralai.client.MistralClient.chat",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "local_features": [
+                    {
+                      "always-via": "obscure:model"
+                    },
+                    {
+                      "via": "format-string"
+                    },
+                    {
+                      "via": "model-shaping"
+                    },
+                    {
+                      "always-via": "tito-broadening"
+                    },
+                    {
+                      "always-via": "tito"
+                    },
+                    {
+                      "always-via": "broadening"
+                    },
+                    {
+                      "via": "model-tito-shaping"
+                    },
+                    {
+                      "via": "obscure:unknown-callee"
+                    }
+                  ],
+                  "tito_positions": [
+                    {
+                      "line": 1176,
+                      "start": 28,
+                      "end": 31
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6840,
+                      "upper": 6841
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "always-via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "zhipuai.ZhipuAI.chat.completions.create",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "mistralai.client.MistralClient.chat",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "local_features": [
+                    {
+                      "always-via": "obscure:model"
+                    },
+                    {
+                      "via": "format-string"
+                    },
+                    {
+                      "via": "model-shaping"
+                    },
+                    {
+                      "always-via": "tito-broadening"
+                    },
+                    {
+                      "always-via": "tito"
+                    },
+                    {
+                      "always-via": "broadening"
+                    },
+                    {
+                      "via": "model-tito-shaping"
+                    },
+                    {
+                      "via": "obscure:unknown-callee"
+                    }
+                  ],
+                  "tito_positions": [
+                    {
+                      "line": 1176,
+                      "start": 28,
+                      "end": 31
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1135,
+                      "start": 18,
+                      "end": 54
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.generate_sql",
+                      "src.vanna.mistral.mistral.Mistral.generate_sql",
+                      "src.vanna.ollama.ollama.Ollama.generate_sql"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6842,
+                      "upper": 6843
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "always-via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        },
+                        {
+                          "name": "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 1,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1174,
+                      "start": 34,
+                      "end": 34
+                    },
+                    "resolves_to": [
+                      "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+                      "src.vanna.base.base.VannaBase.generate_plotly_code"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "always-via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "zhipuai.ZhipuAI.chat.completions.create",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1174,
+                      "start": 34,
+                      "end": 34
+                    },
+                    "resolves_to": [
+                      "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+                      "src.vanna.base.base.VannaBase.generate_plotly_code"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6828,
+                      "upper": 6829
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                },
+                {
+                  "kinds": [
+                    {
+                      "features": [
+                        {
+                          "has": "first-index"
+                        },
+                        {
+                          "first-index": "<numeric>"
+                        },
+                        {
+                          "has": "first-field"
+                        },
+                        {
+                          "first-field": "choices"
+                        },
+                        {
+                          "always-via": "obscure:model"
+                        },
+                        {
+                          "always-via": "tito"
+                        }
+                      ],
+                      "leaves": [
+                        {
+                          "name": "mistralai.client.MistralClient.chat",
+                          "port": "leaf:return"
+                        }
+                      ],
+                      "length": 2,
+                      "kind": "LLMControlled"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1174,
+                      "start": 34,
+                      "end": 34
+                    },
+                    "resolves_to": [
+                      "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+                      "src.vanna.base.base.VannaBase.generate_plotly_code"
+                    ],
+                    "port": "result"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6840,
+                      "upper": 6841
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                }
+              ]
+            },
+            {
+              "name": "backward",
+              "roots": [
+                {
+                  "kinds": [
+                    {
+                      "leaves": [
+                        {
+                          "name": "exec",
+                          "port": "leaf:source"
+                        }
+                      ],
+                      "length": 1,
+                      "kind": "RemoteCodeExecution"
+                    }
+                  ],
+                  "call": {
+                    "position": {
+                      "line": 1179,
+                      "start": 61,
+                      "end": 72
+                    },
+                    "resolves_to": [
+                      "src.vanna.base.base.VannaBase.get_plotly_figure"
+                    ],
+                    "port": "formal(plotly_code, position=1)",
+                    "call_site": "1179:26-1179:80"
+                  },
+                  "caller_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "receiver_interval": [
+                    {
+                      "lower": 6827,
+                      "upper": 6852
+                    }
+                  ],
+                  "is_self_call": true
+                }
+              ]
+            }
+          ],
+          "features": [
+            {
+              "has": "first-index"
+            },
+            {
+              "first-index": "<numeric>"
+            },
+            {
+              "has": "first-field"
+            },
+            {
+              "first-field": "choices"
+            },
+            {
+              "always-via": "obscure:model"
+            },
+            {
+              "via": "format-string"
+            },
+            {
+              "via": "model-shaping"
+            },
+            {
+              "via": "tito-broadening"
+            },
+            {
+              "always-via": "tito"
+            },
+            {
+              "via": "broadening"
+            },
+            {
+              "via": "model-tito-shaping"
+            },
+            {
+              "via": "obscure:unknown-callee"
+            }
+          ],
+          "sink_handle": {
+            "kind": "Call",
+            "callee": "src.vanna.base.base.VannaBase.get_plotly_figure",
+            "index": 0,
+            "parameter": "formal(plotly_code)"
+          },
+          "master_handle": "src.vanna.base.base.VannaBase.ask:5001:0:Call|src.vanna.base.base.VannaBase.get_plotly_figure|0|formal(plotly_code):9753dc9417de30527f7b2286aabe5136"
+        }
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "finding_line": 2027,
+      "callable": "src.vanna.base.base.VannaBase.ask",
+      "code": "5008",
+      "score": 5,
+      "verdict": "RELATED_BUT_NOT_CONFIRMED",
+      "matched_sinks": [
+        "sql"
+      ],
+      "matched_identifiers": [],
+      "type_match": false,
+      "reasons": [
+        "sink matches benchmark",
+        "no component/function identifier matches",
+        "Pysa code 5008 not confirmed by benchmark vulnerability type"
+      ]
+    },
+    {
+      "finding_line": 2028,
+      "callable": "src.vanna.base.base.VannaBase.ask",
+      "code": "5001",
+      "score": 9,
+      "verdict": "POSSIBLE_MATCH",
+      "matched_sinks": [
+        "exec"
+      ],
+      "matched_identifiers": [
+        "exec"
+      ],
+      "type_match": true,
+      "reasons": [
+        "sink matches benchmark",
+        "one component/function identifier matches",
+        "Pysa code 5001 matches benchmark vulnerability type"
+      ]
+    }
+  ],
+  "online_cross_check": {
+    "cve": "CVE-2024-5826",
+    "nvd": {
+      "found": true,
+      "id": "CVE-2024-5826",
+      "description": "In the latest version of vanna-ai/vanna, the `vanna.ask` function is vulnerable to remote code execution due to prompt injection. The root cause is the lack of a sandbox when executing LLM-generated code, allowing an attacker to manipulate the code executed by the `exec` function in `src/vanna/base/base.py`. This vulnerability can be exploited by an attacker to achieve remote code execution on the app backend server, potentially gaining full control of the server.",
+      "references": [
+        "https://huntr.com/bounties/90620087-44ac-4e43-b659-3c5d30889369",
+        "https://huntr.com/bounties/90620087-44ac-4e43-b659-3c5d30889369"
+      ]
+    },
+    "osv": null,
+    "errors": [
+      "OSV: HTTP Error 404: Not Found"
+    ],
+    "supporting_evidence": {
+      "repo_name_mentioned": true,
+      "version_mentioned": false,
+      "benchmark_identifiers_found": [],
+      "note": "Online results are a secondary validation layer. They do not replace the primary benchmark comparison."
+    }
+  }
+}

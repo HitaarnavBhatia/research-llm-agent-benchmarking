@@ -1,0 +1,1847 @@
+{
+  "__import__": [
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake"
+  ],
+  "_warnings.warn": [
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__"
+  ],
+  "any": [
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake"
+  ],
+  "dataclasses.asdict": [
+    "src.vanna.__dataclass_to_dict",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore._dataclass_to_dict"
+  ],
+  "exec": [
+    "src.vanna.base.base.VannaBase.get_plotly_figure"
+  ],
+  "genericpath.exists": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite",
+    "src.vanna.utils.validate_config_path"
+  ],
+  "genericpath.isfile": [
+    "src.vanna.utils.validate_config_path"
+  ],
+  "getattr": [
+    "pydantic.v1.networks.AnyUrl.__repr__"
+  ],
+  "globals": [
+    "src.vanna.base.base.VannaBase.get_plotly_figure"
+  ],
+  "hasattr": [
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_questions"
+  ],
+  "hashlib.sha256": [
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "input": [
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.get_api_key"
+  ],
+  "isinstance": [
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__init__",
+    "src.vanna.base.base.VannaBase._get_databases",
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_bigquery.run_sql_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_mysql.run_sql_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_postgres",
+    "src.vanna.base.base.VannaBase.connect_to_postgres.run_sql_postgres",
+    "src.vanna.base.base.VannaBase.get_plotly_figure",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.__init__",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore._extract_documents",
+    "src.vanna.flask.VannaFlaskApp.__init__.add_training_data",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_plotly_figure",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_questions",
+    "src.vanna.flask.VannaFlaskApp.__init__.load_question",
+    "src.vanna.flask.VannaFlaskApp.__init__.run_sql",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.marqo.marqo.Marqo_VectorStore._extract_documents",
+    "src.vanna.utils.deterministic_uuid",
+    "src.vanna.utils.sanitize_model_name",
+    "tests.test_vanna.$toplevel"
+  ],
+  "json.dumps": [
+    "src.vanna.__unauthenticated_rpc_call",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_question_sql",
+    "src.vanna.remote.VannaDefault.submit_prompt",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore._rpc_call"
+  ],
+  "json.loads": [
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore._extract_documents",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_training_data"
+  ],
+  "len": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.str_to_approx_token_count",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase._extract_python_code",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.get_plotly_figure",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.base.base.VannaBase.str_to_approx_token_count",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore._extract_documents",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.generate_embedding",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_followup_questions",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_questions",
+    "src.vanna.flask.VannaFlaskApp.__init__.get_training_data",
+    "src.vanna.marqo.marqo.Marqo_VectorStore._extract_documents",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+    "tests.test_vanna.test_training_plan",
+    "tests.test_vanna.test_vn_chroma",
+    "tests.test_vanna.test_vn_claude",
+    "tests.test_vanna.test_vn_default",
+    "tests.test_vanna.test_vn_mistral",
+    "tests.test_vanna.test_vn_openai"
+  ],
+  "logging.getLogger": [
+    "src.vanna.flask.VannaFlaskApp.__init__"
+  ],
+  "open": [
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite"
+  ],
+  "os.access": [
+    "src.vanna.utils.validate_config_path"
+  ],
+  "os.getenv": [
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.__init__",
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_postgres",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.__init__"
+  ],
+  "posixpath.basename": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite"
+  ],
+  "print": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase._get_databases",
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.get_sql_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.base.base.VannaBase.log",
+    "src.vanna.base.base.VannaBase.train",
+    "src.vanna.flask.VannaFlaskApp.__init__.add_training_data",
+    "src.vanna.flask.VannaFlaskApp.run",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+    "tests.test_vanna.$toplevel"
+  ],
+  "re.compile": [
+    "src.vanna.ollama.ollama.Ollama.extract_sql_query"
+  ],
+  "re.findall": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.base.base.VannaBase._extract_python_code"
+  ],
+  "re.search": [
+    "src.vanna.base.base.VannaBase.extract_sql"
+  ],
+  "re.sub": [
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.utils.sanitize_model_name"
+  ],
+  "requests.api.get": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite",
+    "src.vanna.flask.VannaFlaskApp.__init__.proxy_vanna_svg"
+  ],
+  "requests.api.post": [
+    "src.vanna.__unauthenticated_rpc_call",
+    "src.vanna.ollama.ollama.Ollama.submit_prompt",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore._rpc_call"
+  ],
+  "src.vanna.__dataclass_to_dict": [
+    "src.vanna.__unauthenticated_rpc_call"
+  ],
+  "src.vanna.__unauthenticated_rpc_call": [
+    "src.vanna.get_api_key"
+  ],
+  "src.vanna.error_deprecation": [
+    "src.vanna.add_ddl",
+    "src.vanna.add_documentation",
+    "src.vanna.add_sql",
+    "src.vanna.add_user_to_model",
+    "src.vanna.ask",
+    "src.vanna.connect_to_bigquery",
+    "src.vanna.connect_to_duckdb",
+    "src.vanna.connect_to_postgres",
+    "src.vanna.connect_to_snowflake",
+    "src.vanna.connect_to_sqlite",
+    "src.vanna.create_model",
+    "src.vanna.flag_sql_for_review",
+    "src.vanna.generate_explanation",
+    "src.vanna.generate_followup_questions",
+    "src.vanna.generate_meta",
+    "src.vanna.generate_plotly_code",
+    "src.vanna.generate_question",
+    "src.vanna.generate_questions",
+    "src.vanna.generate_sql",
+    "src.vanna.get_all_questions",
+    "src.vanna.get_models",
+    "src.vanna.get_plotly_figure",
+    "src.vanna.get_related_training_data",
+    "src.vanna.get_results",
+    "src.vanna.get_training_data",
+    "src.vanna.get_training_plan_experimental",
+    "src.vanna.get_training_plan_generic",
+    "src.vanna.get_training_plan_postgres",
+    "src.vanna.remove_sql",
+    "src.vanna.remove_training_data",
+    "src.vanna.set_api_key",
+    "src.vanna.set_model",
+    "src.vanna.train",
+    "src.vanna.update_model_visibility"
+  ],
+  "src.vanna.utils.deterministic_uuid": [
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_ddl",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_documentation",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_question_sql"
+  ],
+  "src.vanna.utils.sanitize_model_name": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.create_model"
+  ],
+  "src.vanna.utils.validate_config_path": [
+    "src.vanna.base.base.VannaBase.connect_to_bigquery"
+  ],
+  "traceback.print_exc": [
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_plotly_figure"
+  ],
+  "urllib.parse.urlparse": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite"
+  ],
+  "uuid.uuid4": [
+    "src.vanna.flask.MemoryCache.generate_id",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_ddl",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_documentation",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_question_sql"
+  ],
+  "uuid.uuid5": [
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "BaseException.__init__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.__init__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__init__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAI_Embeddings.__init__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_mssql",
+    "src.vanna.base.base.VannaBase.connect_to_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_mysql.run_sql_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_postgres",
+    "src.vanna.base.base.VannaBase.connect_to_postgres.run_sql_postgres",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.base.base.VannaBase.run_sql",
+    "src.vanna.base.base.VannaBase.train",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.__init__",
+    "src.vanna.error_deprecation",
+    "src.vanna.get_api_key",
+    "src.vanna.mistral.mistral.Mistral.__init__",
+    "src.vanna.ollama.ollama.Ollama.__init__",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.__init__",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+    "src.vanna.utils.deterministic_uuid",
+    "src.vanna.utils.sanitize_model_name",
+    "src.vanna.utils.validate_config_path",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "BaseException.__new__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.__init__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__init__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAI_Embeddings.__init__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_mssql",
+    "src.vanna.base.base.VannaBase.connect_to_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_mysql.run_sql_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_postgres",
+    "src.vanna.base.base.VannaBase.connect_to_postgres.run_sql_postgres",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.base.base.VannaBase.run_sql",
+    "src.vanna.base.base.VannaBase.train",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.__init__",
+    "src.vanna.error_deprecation",
+    "src.vanna.get_api_key",
+    "src.vanna.mistral.mistral.Mistral.__init__",
+    "src.vanna.ollama.ollama.Ollama.__init__",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.__init__",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+    "src.vanna.utils.deterministic_uuid",
+    "src.vanna.utils.sanitize_model_name",
+    "src.vanna.utils.validate_config_path",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "BaseException.__str__": [
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__init__",
+    "src.vanna.flask.VannaFlaskApp.__init__.add_training_data",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_plotly_figure",
+    "src.vanna.flask.VannaFlaskApp.__init__.load_question",
+    "src.vanna.flask.VannaFlaskApp.__init__.run_sql",
+    "tests.test_vanna.$toplevel"
+  ],
+  "_csv._reader.__next__": [
+    "Overrides{_csv._reader.__next__}"
+  ],
+  "_io.BufferedWriter.write": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite"
+  ],
+  "_io.StringIO.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_training_data"
+  ],
+  "_io._IOBase.__enter__": [
+    "src.vanna.base.base.VannaBase.connect_to_bigquery",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite"
+  ],
+  "_io._TextIOBase.read": [
+    "src.vanna.base.base.VannaBase.connect_to_bigquery"
+  ],
+  "dict.__getitem__": [
+    "Overrides{dict.__getitem__}",
+    "pip._vendor.distlib.compat.ConvertingDict.__getitem__",
+    "pydantic._internal._generics.LimitedDict.__setitem__"
+  ],
+  "dict.__setitem__": [
+    "Overrides{dict.__setitem__}",
+    "pip._vendor.distlib.compat.ConvertingDict.__getitem__",
+    "pip._vendor.distlib.compat.ConvertingDict.get",
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__"
+  ],
+  "dict.get": [
+    "Overrides{dict.get}",
+    "pip._vendor.distlib.compat.ConvertingDict.get",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__"
+  ],
+  "dict.keys": [
+    "pydantic._internal._generics.LimitedDict.__setitem__"
+  ],
+  "django.http.cookie.SimpleCookie.__getitem__": [
+    "Overrides{django.http.cookie.SimpleCookie.__getitem__}"
+  ],
+  "django.http.response.HttpResponseBase.__next__": [
+    "Overrides{django.http.response.HttpResponseBase.__next__}"
+  ],
+  "duckdb.connect.query": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb"
+  ],
+  "enum.Enum.name": [
+    "pip._vendor.rich.color.ColorSystem.__repr__",
+    "pip._vendor.rich.color.ColorType.__repr__"
+  ],
+  "enum.Enum.value": [
+    "pydantic.types.PaymentCardBrand.__str__",
+    "pydantic.v1.types.PaymentCardBrand.__str__"
+  ],
+  "enum._EnumDict.__setitem__": [
+    "Overrides{enum._EnumDict.__setitem__}"
+  ],
+  "float.__add__": [
+    "Overrides{float.__add__}"
+  ],
+  "float.__gt__": [
+    "Overrides{float.__gt__}"
+  ],
+  "float.__le__": [
+    "Overrides{float.__le__}"
+  ],
+  "hashlib._Hash.hexdigest": [
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "http.cookies.BaseCookie.__setitem__": [
+    "Overrides{http.cookies.BaseCookie.__setitem__}"
+  ],
+  "http.cookies.Morsel.__setitem__": [
+    "Overrides{http.cookies.Morsel.__setitem__}"
+  ],
+  "importlib.metadata.EntryPoints.__getitem__": [
+    "Overrides{importlib.metadata.EntryPoints.__getitem__}"
+  ],
+  "int.__add__": [
+    "Overrides{int.__add__}",
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt"
+  ],
+  "int.__eq__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase._extract_python_code",
+    "src.vanna.base.base.VannaBase.get_plotly_figure",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore._extract_documents",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.generate_embedding",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_questions",
+    "src.vanna.flask.VannaFlaskApp.__init__.get_training_data",
+    "src.vanna.flask.VannaFlaskApp.__init__.proxy_vanna_svg",
+    "src.vanna.marqo.marqo.Marqo_VectorStore._extract_documents",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+    "tests.test_vanna.test_training_plan",
+    "tests.test_vanna.test_vn_chroma",
+    "tests.test_vanna.test_vn_claude",
+    "tests.test_vanna.test_vn_default",
+    "tests.test_vanna.test_vn_mistral",
+    "tests.test_vanna.test_vn_openai"
+  ],
+  "int.__floordiv__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__"
+  ],
+  "int.__ge__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.get_plotly_figure"
+  ],
+  "int.__gt__": [
+    "Overrides{int.__gt__}",
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_followup_questions"
+  ],
+  "int.__le__": [
+    "Overrides{int.__le__}",
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_followup_questions"
+  ],
+  "int.__lt__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.get_plotly_figure"
+  ],
+  "int.__ne__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase._extract_python_code",
+    "src.vanna.base.base.VannaBase.get_plotly_figure",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore._extract_documents",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.generate_embedding",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_questions",
+    "src.vanna.flask.VannaFlaskApp.__init__.get_training_data",
+    "src.vanna.flask.VannaFlaskApp.__init__.proxy_vanna_svg",
+    "src.vanna.marqo.marqo.Marqo_VectorStore._extract_documents",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "int.__sub__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__"
+  ],
+  "int.__truediv__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.str_to_approx_token_count",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase.str_to_approx_token_count",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "list.__getitem__": [
+    "Overrides{list.__getitem__}",
+    "pip._vendor.distlib.compat.ConvertingList.__getitem__"
+  ],
+  "list.__iadd__": [
+    "src.vanna.base.base.VannaBase.get_training_plan_generic"
+  ],
+  "list.__init__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__"
+  ],
+  "list.__iter__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.TrainingPlan.get_summary",
+    "src.vanna.TrainingPlan.remove_item",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.base.base.VannaBase._extract_python_code",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.generate_questions",
+    "src.vanna.base.base.VannaBase.get_sql_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.base.base.VannaBase.train",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_training_data",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.types.TrainingPlan.get_summary",
+    "src.vanna.types.TrainingPlan.remove_item"
+  ],
+  "list.__setitem__": [
+    "pip._vendor.distlib.compat.ConvertingList.__getitem__"
+  ],
+  "list.append": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase._extract_python_code",
+    "src.vanna.base.base.VannaBase.connect_to_bigquery.run_sql_bigquery",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_sql_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_generic",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.get_training_data"
+  ],
+  "list.remove": [
+    "src.vanna.TrainingPlan.remove_item",
+    "src.vanna.types.TrainingPlan.remove_item"
+  ],
+  "logging.Logger.setLevel": [
+    "src.vanna.flask.VannaFlaskApp.__init__"
+  ],
+  "logging.config.ConvertingDict.__getitem__": [
+    "Overrides{logging.config.ConvertingDict.__getitem__}"
+  ],
+  "logging.config.ConvertingDict.get": [
+    "Overrides{logging.config.ConvertingDict.get}"
+  ],
+  "logging.config.ConvertingList.__getitem__": [
+    "Overrides{logging.config.ConvertingList.__getitem__}"
+  ],
+  "mistralai.client.MistralClient.chat": [
+    "src.vanna.mistral.mistral.Mistral.submit_prompt"
+  ],
+  "object.__class__": [
+    "pydantic.v1.networks.AnyUrl.__repr__"
+  ],
+  "object.__init__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__init__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAI_Embeddings.__init__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.__init__",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_oracle",
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_followup_questions",
+    "src.vanna.mistral.mistral.Mistral.__init__",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.__init__",
+    "src.vanna.openai.openai_embeddings.OpenAI_Embeddings.__init__",
+    "src.vanna.utils.sanitize_model_name"
+  ],
+  "object.__new__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__init__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAI_Embeddings.__init__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.__init__",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_mysql",
+    "src.vanna.base.base.VannaBase.connect_to_oracle",
+    "src.vanna.base.base.VannaBase.get_training_plan_generic",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.VannaFlaskApp.__init__",
+    "src.vanna.get_api_key",
+    "src.vanna.mistral.mistral.Mistral.__init__",
+    "src.vanna.mistral.mistral.Mistral.generate_sql",
+    "src.vanna.ollama.ollama.Ollama.generate_sql",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.__init__",
+    "src.vanna.openai.openai_embeddings.OpenAI_Embeddings.__init__",
+    "src.vanna.remote.VannaDefault.submit_prompt",
+    "src.vanna.utils.deterministic_uuid",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.create_model",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_models",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_training_data_cached",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_training_data",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data",
+    "tests.test_vanna.$toplevel"
+  ],
+  "object.__repr__": [
+    "pip._vendor.rich.color.ColorSystem.__repr__",
+    "pip._vendor.rich.color.ColorType.__repr__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.TrainingPlanItem.__str__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase._get_information_schema_tables",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake.run_sql_snowflake",
+    "src.vanna.base.base.VannaBase.extract_sql",
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_summary",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.MemoryCache.generate_id",
+    "src.vanna.flask.VannaFlaskApp.__init__.download_csv",
+    "src.vanna.flask.VannaFlaskApp.__init__.fix_sql",
+    "src.vanna.get_api_key",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_ddl",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_documentation",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_question_sql",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+    "src.vanna.types.TrainingPlanItem.__str__",
+    "src.vanna.utils.deterministic_uuid",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "object.__str__": [
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt",
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "os._Environ.__getitem__": [
+    "tests.test_vanna.$toplevel"
+  ],
+  "os._ScandirIterator.__next__": [
+    "Overrides{os._ScandirIterator.__next__}"
+  ],
+  "pdb._rstr.__repr__": [
+    "pip._vendor.rich.color.ColorSystem.__repr__",
+    "pip._vendor.rich.color.ColorType.__repr__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.TrainingPlanItem.__str__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase._get_information_schema_tables",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake.run_sql_snowflake",
+    "src.vanna.base.base.VannaBase.extract_sql",
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_summary",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.VannaFlaskApp.__init__.download_csv",
+    "src.vanna.flask.VannaFlaskApp.__init__.fix_sql",
+    "src.vanna.get_api_key",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.types.TrainingPlanItem.__str__",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "pip._vendor.distlib.compat.ConvertingDict.__getitem__": [
+    "Overrides{pip._vendor.distlib.compat.ConvertingDict.__getitem__}"
+  ],
+  "pip._vendor.distlib.compat.ConvertingDict.get": [
+    "Overrides{pip._vendor.distlib.compat.ConvertingDict.get}"
+  ],
+  "pip._vendor.distlib.compat.ConvertingList.__getitem__": [
+    "Overrides{pip._vendor.distlib.compat.ConvertingList.__getitem__}"
+  ],
+  "pip._vendor.distlib.compat.OrderedDict.__setitem__": [
+    "Overrides{pip._vendor.distlib.compat.OrderedDict.__setitem__}"
+  ],
+  "pip._vendor.pyparsing.core.ParserElement._CacheType.get": [
+    "Overrides{pip._vendor.pyparsing.core.ParserElement._CacheType.get}"
+  ],
+  "pip._vendor.requests.structures.LookupDict.__getitem__": [
+    "Overrides{pip._vendor.requests.structures.LookupDict.__getitem__}"
+  ],
+  "pip._vendor.requests.structures.LookupDict.get": [
+    "Overrides{pip._vendor.requests.structures.LookupDict.get}"
+  ],
+  "pip._vendor.rich.color.ColorSystem.__repr__": [
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "pip._vendor.rich.color.ColorType.__repr__": [
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "psycopg2.extras.DictRow.__getitem__": [
+    "Overrides{psycopg2.extras.DictRow.__getitem__}"
+  ],
+  "psycopg2.extras.RealDictRow.__setitem__": [
+    "Overrides{psycopg2.extras.RealDictRow.__setitem__}"
+  ],
+  "pydantic._internal._generics.LimitedDict.__setitem__": [
+    "Overrides{pydantic._internal._generics.LimitedDict.__setitem__}"
+  ],
+  "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__": [
+    "Overrides{pydantic._internal._model_construction._ModelNamespaceDict.__setitem__}"
+  ],
+  "pydantic._internal._repr.PlainRepr.__repr__": [
+    "pip._vendor.rich.color.ColorSystem.__repr__",
+    "pip._vendor.rich.color.ColorType.__repr__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "pydantic._internal._repr.PlainRepr.__repr__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.TrainingPlanItem.__str__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase._get_information_schema_tables",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake.run_sql_snowflake",
+    "src.vanna.base.base.VannaBase.extract_sql",
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_summary",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.VannaFlaskApp.__init__.download_csv",
+    "src.vanna.flask.VannaFlaskApp.__init__.fix_sql",
+    "src.vanna.get_api_key",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.types.TrainingPlanItem.__str__",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "pydantic.types.PaymentCardBrand.__str__": [
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "pydantic.v1.networks.AnyUrl.__repr__": [
+    "pip._vendor.rich.color.ColorSystem.__repr__",
+    "pip._vendor.rich.color.ColorType.__repr__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.TrainingPlanItem.__str__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase._get_information_schema_tables",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake.run_sql_snowflake",
+    "src.vanna.base.base.VannaBase.extract_sql",
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_summary",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.VannaFlaskApp.__init__.download_csv",
+    "src.vanna.flask.VannaFlaskApp.__init__.fix_sql",
+    "src.vanna.get_api_key",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.types.TrainingPlanItem.__str__",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "pydantic.v1.types.PaymentCardBrand.__str__": [
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "pydantic.v1.utils.PyObjectStr.__repr__": [
+    "pip._vendor.rich.color.ColorSystem.__repr__",
+    "pip._vendor.rich.color.ColorType.__repr__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "pydantic.v1.utils.PyObjectStr.__repr__",
+    "src.vanna.TrainingPlanItem.__str__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase._get_information_schema_tables",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake.run_sql_snowflake",
+    "src.vanna.base.base.VannaBase.extract_sql",
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_summary",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.flask.VannaFlaskApp.__init__.download_csv",
+    "src.vanna.flask.VannaFlaskApp.__init__.fix_sql",
+    "src.vanna.get_api_key",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.types.TrainingPlanItem.__str__",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "re.Match.group": [
+    "src.vanna.base.base.VannaBase.extract_sql",
+    "src.vanna.ollama.ollama.Ollama.extract_sql_query"
+  ],
+  "re.Pattern.search": [
+    "src.vanna.ollama.ollama.Ollama.extract_sql_query"
+  ],
+  "requests.models.Response.content": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite",
+    "src.vanna.flask.VannaFlaskApp.__init__.proxy_vanna_svg"
+  ],
+  "requests.models.Response.json": [
+    "src.vanna.__unauthenticated_rpc_call",
+    "src.vanna.ollama.ollama.Ollama.submit_prompt",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore._rpc_call"
+  ],
+  "requests.models.Response.raise_for_status": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_sqlite"
+  ],
+  "requests.models.Response.text": [
+    "src.vanna.ollama.ollama.Ollama.submit_prompt"
+  ],
+  "requests.structures.LookupDict.__getitem__": [
+    "Overrides{requests.structures.LookupDict.__getitem__}"
+  ],
+  "requests.structures.LookupDict.get": [
+    "Overrides{requests.structures.LookupDict.get}"
+  ],
+  "slice.__new__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_followup_questions",
+    "src.vanna.utils.sanitize_model_name"
+  ],
+  "src.vanna.TrainingPlan.__str__": [
+    "src.vanna.TrainingPlan.__repr__"
+  ],
+  "src.vanna.TrainingPlan.get_summary": [
+    "src.vanna.TrainingPlan.__str__"
+  ],
+  "src.vanna.TrainingPlanItem.__str__": [
+    "src.vanna.TrainingPlan.get_summary",
+    "src.vanna.TrainingPlan.remove_item"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._sanitize_plotly_code": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._sanitize_plotly_code}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.assistant_message": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.assistant_message}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code}"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_question": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_question}"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt}"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.str_to_approx_token_count": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.str_to_approx_token_count}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_question"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.system_message": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.system_message}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_question",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt"
+  ],
+  "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.user_message": [
+    "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.user_message}",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_question",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_followup_questions_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt"
+  ],
+  "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.assistant_message": [
+    "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.assistant_message}"
+  ],
+  "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt": [
+    "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt}"
+  ],
+  "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.system_message": [
+    "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.system_message}"
+  ],
+  "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.user_message": [
+    "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.user_message}"
+  ],
+  "src.vanna.base.base.VannaBase.__init__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.__init__",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAI_Embeddings.__init__",
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.__init__",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.__init__",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.__init__",
+    "src.vanna.openai.openai_embeddings.OpenAI_Embeddings.__init__",
+    "src.vanna.remote.VannaDefault.__init__",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.__init__"
+  ],
+  "src.vanna.base.base.VannaBase._extract_python_code": [
+    "Overrides{src.vanna.base.base.VannaBase._extract_python_code}"
+  ],
+  "src.vanna.base.base.VannaBase._get_databases": [
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake"
+  ],
+  "src.vanna.base.base.VannaBase._get_information_schema_tables": [
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake"
+  ],
+  "src.vanna.base.base.VannaBase._sanitize_plotly_code": [
+    "Overrides{src.vanna.base.base.VannaBase._sanitize_plotly_code}"
+  ],
+  "src.vanna.base.base.VannaBase.add_ddl": [
+    "Overrides{src.vanna.base.base.VannaBase.add_ddl}"
+  ],
+  "src.vanna.base.base.VannaBase.add_ddl_to_prompt": [
+    "Overrides{src.vanna.base.base.VannaBase.add_ddl_to_prompt}"
+  ],
+  "src.vanna.base.base.VannaBase.add_documentation": [
+    "Overrides{src.vanna.base.base.VannaBase.add_documentation}"
+  ],
+  "src.vanna.base.base.VannaBase.add_documentation_to_prompt": [
+    "Overrides{src.vanna.base.base.VannaBase.add_documentation_to_prompt}"
+  ],
+  "src.vanna.base.base.VannaBase.add_question_sql": [
+    "Overrides{src.vanna.base.base.VannaBase.add_question_sql}"
+  ],
+  "src.vanna.base.base.VannaBase.add_sql_to_prompt": [
+    "Overrides{src.vanna.base.base.VannaBase.add_sql_to_prompt}"
+  ],
+  "src.vanna.base.base.VannaBase.assistant_message": [
+    "Overrides{src.vanna.base.base.VannaBase.assistant_message}"
+  ],
+  "src.vanna.base.base.VannaBase.extract_sql": [
+    "src.vanna.base.base.VannaBase.generate_sql"
+  ],
+  "src.vanna.base.base.VannaBase.generate_plotly_code": [
+    "Overrides{src.vanna.base.base.VannaBase.generate_plotly_code}"
+  ],
+  "src.vanna.base.base.VannaBase.generate_question": [
+    "Overrides{src.vanna.base.base.VannaBase.generate_question}"
+  ],
+  "src.vanna.base.base.VannaBase.generate_sql": [
+    "Overrides{src.vanna.base.base.VannaBase.generate_sql}",
+    "src.vanna.mistral.mistral.Mistral.generate_sql",
+    "src.vanna.ollama.ollama.Ollama.generate_sql"
+  ],
+  "src.vanna.base.base.VannaBase.get_plotly_figure": [
+    "src.vanna.base.base.VannaBase.ask"
+  ],
+  "src.vanna.base.base.VannaBase.get_related_ddl": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_ddl}"
+  ],
+  "src.vanna.base.base.VannaBase.get_related_documentation": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_documentation}"
+  ],
+  "src.vanna.base.base.VannaBase.get_similar_question_sql": [
+    "Overrides{src.vanna.base.base.VannaBase.get_similar_question_sql}"
+  ],
+  "src.vanna.base.base.VannaBase.get_sql_prompt": [
+    "Overrides{src.vanna.base.base.VannaBase.get_sql_prompt}"
+  ],
+  "src.vanna.base.base.VannaBase.log": [
+    "src.vanna.base.base.VannaBase.extract_sql",
+    "src.vanna.base.base.VannaBase.generate_sql",
+    "src.vanna.ollama.ollama.Ollama.submit_prompt"
+  ],
+  "src.vanna.base.base.VannaBase.run_sql": [
+    "src.vanna.base.base.VannaBase._get_databases",
+    "src.vanna.base.base.VannaBase._get_information_schema_tables",
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake"
+  ],
+  "src.vanna.base.base.VannaBase.str_to_approx_token_count": [
+    "Overrides{src.vanna.base.base.VannaBase.str_to_approx_token_count}"
+  ],
+  "src.vanna.base.base.VannaBase.submit_prompt": [
+    "Overrides{src.vanna.base.base.VannaBase.submit_prompt}"
+  ],
+  "src.vanna.base.base.VannaBase.system_message": [
+    "Overrides{src.vanna.base.base.VannaBase.system_message}"
+  ],
+  "src.vanna.base.base.VannaBase.user_message": [
+    "Overrides{src.vanna.base.base.VannaBase.user_message}"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.__init__": [
+    "src.vanna.local.LocalContext_OpenAI.__init__"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore._extract_documents": [
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_ddl",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_documentation",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_similar_question_sql"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_ddl": [
+    "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_ddl}"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_documentation": [
+    "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_documentation}"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_question_sql": [
+    "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_question_sql}"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.generate_embedding": [
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_ddl",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_documentation",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_question_sql"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_ddl": [
+    "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_ddl}"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_documentation": [
+    "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_documentation}"
+  ],
+  "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_similar_question_sql": [
+    "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_similar_question_sql}"
+  ],
+  "src.vanna.flask.Cache.generate_id": [
+    "Overrides{src.vanna.flask.Cache.generate_id}"
+  ],
+  "src.vanna.flask.Cache.get": [
+    "Overrides{src.vanna.flask.Cache.get}"
+  ],
+  "src.vanna.flask.Cache.get_all": [
+    "Overrides{src.vanna.flask.Cache.get_all}"
+  ],
+  "src.vanna.flask.Cache.set": [
+    "Overrides{src.vanna.flask.Cache.set}"
+  ],
+  "src.vanna.flask.MemoryCache.__init__": [
+    "src.vanna.flask.VannaFlaskApp.__init__"
+  ],
+  "src.vanna.flask.MemoryCache.generate_id": [
+    "Overrides{src.vanna.flask.MemoryCache.generate_id}"
+  ],
+  "src.vanna.flask.MemoryCache.get": [
+    "Overrides{src.vanna.flask.MemoryCache.get}",
+    "src.vanna.flask.MemoryCache.get_all"
+  ],
+  "src.vanna.flask.MemoryCache.get_all": [
+    "Overrides{src.vanna.flask.MemoryCache.get_all}"
+  ],
+  "src.vanna.flask.MemoryCache.set": [
+    "Overrides{src.vanna.flask.MemoryCache.set}"
+  ],
+  "src.vanna.marqo.marqo.Marqo_VectorStore._extract_documents": [
+    "src.vanna.marqo.marqo.Marqo_VectorStore.get_related_ddl",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.get_related_documentation",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.get_similar_question_sql"
+  ],
+  "src.vanna.marqo.marqo.Marqo_VectorStore.add_ddl": [
+    "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.add_ddl}"
+  ],
+  "src.vanna.marqo.marqo.Marqo_VectorStore.add_documentation": [
+    "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.add_documentation}"
+  ],
+  "src.vanna.marqo.marqo.Marqo_VectorStore.add_question_sql": [
+    "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.add_question_sql}"
+  ],
+  "src.vanna.marqo.marqo.Marqo_VectorStore.get_related_ddl": [
+    "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.get_related_ddl}"
+  ],
+  "src.vanna.marqo.marqo.Marqo_VectorStore.get_related_documentation": [
+    "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.get_related_documentation}"
+  ],
+  "src.vanna.marqo.marqo.Marqo_VectorStore.get_similar_question_sql": [
+    "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.get_similar_question_sql}"
+  ],
+  "src.vanna.mistral.mistral.Mistral.assistant_message": [
+    "Overrides{src.vanna.mistral.mistral.Mistral.assistant_message}"
+  ],
+  "src.vanna.mistral.mistral.Mistral.generate_sql": [
+    "Overrides{src.vanna.mistral.mistral.Mistral.generate_sql}"
+  ],
+  "src.vanna.mistral.mistral.Mistral.submit_prompt": [
+    "Overrides{src.vanna.mistral.mistral.Mistral.submit_prompt}"
+  ],
+  "src.vanna.mistral.mistral.Mistral.system_message": [
+    "Overrides{src.vanna.mistral.mistral.Mistral.system_message}"
+  ],
+  "src.vanna.mistral.mistral.Mistral.user_message": [
+    "Overrides{src.vanna.mistral.mistral.Mistral.user_message}"
+  ],
+  "src.vanna.ollama.ollama.Ollama.assistant_message": [
+    "Overrides{src.vanna.ollama.ollama.Ollama.assistant_message}"
+  ],
+  "src.vanna.ollama.ollama.Ollama.extract_sql_query": [
+    "src.vanna.ollama.ollama.Ollama.generate_sql"
+  ],
+  "src.vanna.ollama.ollama.Ollama.generate_sql": [
+    "Overrides{src.vanna.ollama.ollama.Ollama.generate_sql}"
+  ],
+  "src.vanna.ollama.ollama.Ollama.submit_prompt": [
+    "Overrides{src.vanna.ollama.ollama.Ollama.submit_prompt}"
+  ],
+  "src.vanna.ollama.ollama.Ollama.system_message": [
+    "Overrides{src.vanna.ollama.ollama.Ollama.system_message}"
+  ],
+  "src.vanna.ollama.ollama.Ollama.user_message": [
+    "Overrides{src.vanna.ollama.ollama.Ollama.user_message}"
+  ],
+  "src.vanna.openai.openai_chat.OpenAI_Chat.__init__": [
+    "src.vanna.local.LocalContext_OpenAI.__init__"
+  ],
+  "src.vanna.openai.openai_chat.OpenAI_Chat.assistant_message": [
+    "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.assistant_message}"
+  ],
+  "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt": [
+    "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt}"
+  ],
+  "src.vanna.openai.openai_chat.OpenAI_Chat.system_message": [
+    "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.system_message}"
+  ],
+  "src.vanna.openai.openai_chat.OpenAI_Chat.user_message": [
+    "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.user_message}"
+  ],
+  "src.vanna.remote.VannaDefault.assistant_message": [
+    "Overrides{src.vanna.remote.VannaDefault.assistant_message}"
+  ],
+  "src.vanna.remote.VannaDefault.submit_prompt": [
+    "Overrides{src.vanna.remote.VannaDefault.submit_prompt}"
+  ],
+  "src.vanna.remote.VannaDefault.system_message": [
+    "Overrides{src.vanna.remote.VannaDefault.system_message}"
+  ],
+  "src.vanna.remote.VannaDefault.user_message": [
+    "Overrides{src.vanna.remote.VannaDefault.user_message}"
+  ],
+  "src.vanna.types.ApiKey.__init__": [
+    "src.vanna.get_api_key"
+  ],
+  "src.vanna.types.DataFrameJSON.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_training_data"
+  ],
+  "src.vanna.types.NewOrganization.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.create_model"
+  ],
+  "src.vanna.types.OrganizationList.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_models"
+  ],
+  "src.vanna.types.Question.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_training_data_cached"
+  ],
+  "src.vanna.types.QuestionSQLPair.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql"
+  ],
+  "src.vanna.types.Status.__init__": [
+    "src.vanna.get_api_key",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.create_model",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "src.vanna.types.StatusWithId.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql"
+  ],
+  "src.vanna.types.StringData.__init__": [
+    "src.vanna.remote.VannaDefault.submit_prompt",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "src.vanna.types.TrainingData.__init__": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_training_data_cached"
+  ],
+  "src.vanna.types.TrainingPlan.__init__": [
+    "src.vanna.base.base.VannaBase.get_training_plan_generic",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake"
+  ],
+  "src.vanna.types.TrainingPlan.__str__": [
+    "src.vanna.types.TrainingPlan.__repr__"
+  ],
+  "src.vanna.types.TrainingPlan.get_summary": [
+    "src.vanna.types.TrainingPlan.__str__"
+  ],
+  "src.vanna.types.TrainingPlanItem.__init__": [
+    "src.vanna.base.base.VannaBase.get_training_plan_generic",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake"
+  ],
+  "src.vanna.types.TrainingPlanItem.__str__": [
+    "src.vanna.types.TrainingPlan.get_summary",
+    "src.vanna.types.TrainingPlan.remove_item"
+  ],
+  "src.vanna.types.UserEmail.__init__": [
+    "src.vanna.get_api_key"
+  ],
+  "src.vanna.types.UserOTP.__init__": [
+    "src.vanna.get_api_key"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.__init__": [
+    "src.vanna.remote.VannaDefault.__init__"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore._dataclass_to_dict": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore._rpc_call"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore._rpc_call": [
+    "src.vanna.remote.VannaDefault.submit_prompt",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.create_model",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_models",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_training_data_cached",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_training_data",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.remove_training_data"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl": [
+    "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl}"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation": [
+    "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation}"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql": [
+    "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql}"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_ddl": [
+    "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_ddl}"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_documentation": [
+    "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_documentation}"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_training_data_cached": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_ddl",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_documentation",
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_similar_question_sql"
+  ],
+  "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_similar_question_sql": [
+    "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_similar_question_sql}"
+  ],
+  "str.__add__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.get_training_plan_generic",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_ddl",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_documentation",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_question_sql",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_ddl",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_documentation",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.add_question_sql"
+  ],
+  "str.__eq__": [
+    "src.vanna.TrainingPlanItem.__str__",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake",
+    "src.vanna.base.base.VannaBase.get_sql_prompt",
+    "src.vanna.base.base.VannaBase.train",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.remove_collection",
+    "src.vanna.get_api_key",
+    "src.vanna.types.TrainingPlanItem.__str__"
+  ],
+  "str.__getitem__": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle",
+    "src.vanna.utils.sanitize_model_name"
+  ],
+  "str.__ne__": [
+    "src.vanna.TrainingPlanItem.__str__",
+    "src.vanna.base.base.VannaBase.connect_to_duckdb",
+    "src.vanna.base.base.VannaBase.connect_to_snowflake",
+    "src.vanna.base.base.VannaBase.get_sql_prompt",
+    "src.vanna.base.base.VannaBase.train",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.remove_collection",
+    "src.vanna.get_api_key",
+    "src.vanna.types.TrainingPlanItem.__str__"
+  ],
+  "str.encode": [
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "str.endswith": [
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.remove_training_data",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.remove_training_data"
+  ],
+  "str.join": [
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.TrainingPlan.__str__",
+    "src.vanna.base.base.VannaBase.get_training_plan_generic",
+    "src.vanna.types.TrainingPlan.__str__"
+  ],
+  "str.lower": [
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake"
+  ],
+  "str.replace": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._sanitize_plotly_code",
+    "src.vanna.base.base.VannaBase._sanitize_plotly_code",
+    "src.vanna.mistral.mistral.Mistral.generate_sql",
+    "src.vanna.ollama.ollama.Ollama.extract_sql_query",
+    "src.vanna.ollama.ollama.Ollama.generate_sql"
+  ],
+  "str.rstrip": [
+    "src.vanna.base.base.VannaBase.connect_to_oracle.run_sql_oracle"
+  ],
+  "str.split": [
+    "src.vanna.base.base.VannaBase.generate_followup_questions"
+  ],
+  "str.startswith": [
+    "src.vanna.base.base.VannaBase.connect_to_duckdb"
+  ],
+  "str.upper": [
+    "src.vanna.base.base.VannaBase.is_sql_valid"
+  ],
+  "super.__init__": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "pydantic._internal._model_construction._ModelNamespaceDict.__setitem__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.mistral.mistral.Mistral.generate_sql",
+    "src.vanna.ollama.ollama.Ollama.generate_sql"
+  ],
+  "tests.test_vanna.MyVanna.__init__": [
+    "tests.test_vanna.$toplevel"
+  ],
+  "tests.test_vanna.VannaClaude.__init__": [
+    "tests.test_vanna.$toplevel"
+  ],
+  "tests.test_vanna.VannaMistral.__init__": [
+    "tests.test_vanna.$toplevel"
+  ],
+  "tests.test_vanna.VannaOpenAI.__init__": [
+    "tests.test_vanna.$toplevel"
+  ],
+  "tuple.__iter__": [
+    "pydantic.v1.networks.AnyUrl.__repr__"
+  ],
+  "type.__init__": [
+    "pip._vendor.distlib.compat.ConvertingDict.__getitem__",
+    "pip._vendor.distlib.compat.ConvertingDict.get",
+    "pip._vendor.distlib.compat.ConvertingList.__getitem__",
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "type.__new__": [
+    "pip._vendor.distlib.compat.ConvertingDict.__getitem__",
+    "pip._vendor.distlib.compat.ConvertingDict.get",
+    "pip._vendor.distlib.compat.ConvertingList.__getitem__",
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "types.GeneratorType.__next__": [
+    "Overrides{types.GeneratorType.__next__}"
+  ],
+  "typing.Generator.__next__": [
+    "Overrides{typing.Generator.__next__}"
+  ],
+  "typing.Iterator.__next__": [
+    "Overrides{typing.Iterator.__next__}"
+  ],
+  "typing.Mapping.get": [
+    "src.vanna.get_api_key"
+  ],
+  "uuid.UUID.__init__": [
+    "src.vanna.utils.deterministic_uuid"
+  ],
+  "xml.etree.ElementTree._IterParseIterator.__next__": [
+    "Overrides{xml.etree.ElementTree._IterParseIterator.__next__}"
+  ],
+  "zhipuai.ZhipuAI.chat.completions.create": [
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt"
+  ],
+  "Overrides{_csv._reader.__next__}": [
+    "Overrides{typing.Iterator.__next__}"
+  ],
+  "Overrides{dict.__getitem__}": [
+    "src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql"
+  ],
+  "Overrides{dict.__setitem__}": [
+    "src.vanna.flask.VannaFlaskApp.requires_cache.decorator.decorated"
+  ],
+  "Overrides{dict.get}": [
+    "pip._vendor.requests.structures.LookupDict.__getitem__",
+    "pip._vendor.requests.structures.LookupDict.get",
+    "src.vanna.base.base.VannaBase.get_plotly_figure",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "Overrides{django.http.cookie.SimpleCookie.__getitem__}": [
+    "Overrides{dict.__getitem__}"
+  ],
+  "Overrides{django.http.response.HttpResponseBase.__next__}": [
+    "Overrides{typing.Iterator.__next__}"
+  ],
+  "Overrides{enum._EnumDict.__setitem__}": [
+    "Overrides{dict.__setitem__}"
+  ],
+  "Overrides{float.__add__}": [
+    "src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt",
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "Overrides{float.__gt__}": [
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "Overrides{float.__le__}": [
+    "src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt"
+  ],
+  "Overrides{http.cookies.BaseCookie.__setitem__}": [
+    "Overrides{dict.__setitem__}"
+  ],
+  "Overrides{http.cookies.Morsel.__setitem__}": [
+    "Overrides{dict.__setitem__}"
+  ],
+  "Overrides{importlib.metadata.EntryPoints.__getitem__}": [
+    "Overrides{list.__getitem__}"
+  ],
+  "Overrides{int.__add__}": [
+    "Overrides{float.__add__}"
+  ],
+  "Overrides{int.__gt__}": [
+    "Overrides{float.__gt__}"
+  ],
+  "Overrides{int.__le__}": [
+    "Overrides{float.__le__}"
+  ],
+  "Overrides{list.__getitem__}": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.base.base.VannaBase._extract_python_code"
+  ],
+  "Overrides{logging.config.ConvertingDict.__getitem__}": [
+    "Overrides{dict.__getitem__}"
+  ],
+  "Overrides{logging.config.ConvertingDict.get}": [
+    "Overrides{dict.get}"
+  ],
+  "Overrides{logging.config.ConvertingList.__getitem__}": [
+    "Overrides{list.__getitem__}"
+  ],
+  "Overrides{os._ScandirIterator.__next__}": [
+    "Overrides{typing.Iterator.__next__}"
+  ],
+  "Overrides{pip._vendor.distlib.compat.ConvertingDict.__getitem__}": [
+    "Overrides{dict.__getitem__}"
+  ],
+  "Overrides{pip._vendor.distlib.compat.ConvertingDict.get}": [
+    "Overrides{dict.get}"
+  ],
+  "Overrides{pip._vendor.distlib.compat.ConvertingList.__getitem__}": [
+    "Overrides{list.__getitem__}"
+  ],
+  "Overrides{pip._vendor.distlib.compat.OrderedDict.__setitem__}": [
+    "Overrides{dict.__setitem__}"
+  ],
+  "Overrides{pip._vendor.pyparsing.core.ParserElement._CacheType.get}": [
+    "Overrides{dict.get}"
+  ],
+  "Overrides{pip._vendor.requests.structures.LookupDict.__getitem__}": [
+    "Overrides{dict.__getitem__}"
+  ],
+  "Overrides{pip._vendor.requests.structures.LookupDict.get}": [
+    "Overrides{dict.get}"
+  ],
+  "Overrides{psycopg2.extras.DictRow.__getitem__}": [
+    "Overrides{list.__getitem__}"
+  ],
+  "Overrides{psycopg2.extras.RealDictRow.__setitem__}": [
+    "Overrides{dict.__setitem__}"
+  ],
+  "Overrides{pydantic._internal._generics.LimitedDict.__setitem__}": [
+    "Overrides{dict.__setitem__}"
+  ],
+  "Overrides{pydantic._internal._model_construction._ModelNamespaceDict.__setitem__}": [
+    "Overrides{dict.__setitem__}"
+  ],
+  "Overrides{requests.structures.LookupDict.__getitem__}": [
+    "Overrides{dict.__getitem__}"
+  ],
+  "Overrides{requests.structures.LookupDict.get}": [
+    "Overrides{dict.get}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code}": [
+    "Overrides{src.vanna.base.base.VannaBase._extract_python_code}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._sanitize_plotly_code}": [
+    "Overrides{src.vanna.base.base.VannaBase._sanitize_plotly_code}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_ddl_to_prompt}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_documentation_to_prompt}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_sql_to_prompt}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.assistant_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.assistant_message}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_plotly_code}": [
+    "Overrides{src.vanna.base.base.VannaBase.generate_plotly_code}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.generate_question}": [
+    "Overrides{src.vanna.base.base.VannaBase.generate_question}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_sql_prompt}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.str_to_approx_token_count}": [
+    "Overrides{src.vanna.base.base.VannaBase.str_to_approx_token_count}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.submit_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.submit_prompt}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.system_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.system_message}"
+  ],
+  "Overrides{src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.user_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.user_message}"
+  ],
+  "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.assistant_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.assistant_message}"
+  ],
+  "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.submit_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.submit_prompt}"
+  ],
+  "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.system_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.system_message}"
+  ],
+  "Overrides{src.vanna.anthropic.anthropic_chat.Anthropic_Chat.user_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.user_message}"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase._extract_python_code}": [
+    "src.vanna.base.base.VannaBase.generate_plotly_code"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase._sanitize_plotly_code}": [
+    "src.vanna.base.base.VannaBase.generate_plotly_code"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.add_ddl}": [
+    "src.vanna.base.base.VannaBase.train"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.add_ddl_to_prompt}": [
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_sql_prompt"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.add_documentation}": [
+    "src.vanna.base.base.VannaBase.train"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.add_documentation_to_prompt}": [
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_sql_prompt"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.add_question_sql}": [
+    "src.vanna.base.base.VannaBase.ask",
+    "src.vanna.base.base.VannaBase.train"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.add_sql_to_prompt}": [
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.assistant_message}": [
+    "src.vanna.base.base.VannaBase.get_sql_prompt"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.generate_plotly_code}": [
+    "src.vanna.base.base.VannaBase.ask"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.generate_question}": [
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.base.base.VannaBase.train"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.generate_sql}": [
+    "src.vanna.base.base.VannaBase.ask"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.get_related_ddl}": [
+    "src.vanna.base.base.VannaBase.generate_sql"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.get_related_documentation}": [
+    "src.vanna.base.base.VannaBase.generate_sql"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.get_similar_question_sql}": [
+    "src.vanna.base.base.VannaBase.generate_questions",
+    "src.vanna.base.base.VannaBase.generate_sql"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.get_sql_prompt}": [
+    "src.vanna.base.base.VannaBase.generate_sql"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.str_to_approx_token_count}": [
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.submit_prompt}": [
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_question",
+    "src.vanna.base.base.VannaBase.generate_sql",
+    "src.vanna.base.base.VannaBase.generate_summary"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.system_message}": [
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_question",
+    "src.vanna.base.base.VannaBase.generate_summary",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_sql_prompt"
+  ],
+  "Overrides{src.vanna.base.base.VannaBase.user_message}": [
+    "src.vanna.base.base.VannaBase.generate_followup_questions",
+    "src.vanna.base.base.VannaBase.generate_plotly_code",
+    "src.vanna.base.base.VannaBase.generate_question",
+    "src.vanna.base.base.VannaBase.generate_summary",
+    "src.vanna.base.base.VannaBase.get_followup_questions_prompt",
+    "src.vanna.base.base.VannaBase.get_sql_prompt"
+  ],
+  "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_ddl}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_ddl}"
+  ],
+  "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_documentation}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_documentation}"
+  ],
+  "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.add_question_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_question_sql}"
+  ],
+  "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_ddl}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_ddl}"
+  ],
+  "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_related_documentation}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_documentation}"
+  ],
+  "Overrides{src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_similar_question_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_similar_question_sql}"
+  ],
+  "Overrides{src.vanna.flask.Cache.generate_id}": [
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_sql"
+  ],
+  "Overrides{src.vanna.flask.Cache.get}": [
+    "src.vanna.flask.VannaFlaskApp.requires_cache.decorator.decorated"
+  ],
+  "Overrides{src.vanna.flask.Cache.get_all}": [
+    "src.vanna.flask.VannaFlaskApp.__init__.get_question_history"
+  ],
+  "Overrides{src.vanna.flask.Cache.set}": [
+    "src.vanna.flask.VannaFlaskApp.__init__.fix_sql",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_followup_questions",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_plotly_figure",
+    "src.vanna.flask.VannaFlaskApp.__init__.generate_sql",
+    "src.vanna.flask.VannaFlaskApp.__init__.run_sql",
+    "src.vanna.flask.VannaFlaskApp.__init__.update_sql"
+  ],
+  "Overrides{src.vanna.flask.MemoryCache.generate_id}": [
+    "Overrides{src.vanna.flask.Cache.generate_id}"
+  ],
+  "Overrides{src.vanna.flask.MemoryCache.get}": [
+    "Overrides{src.vanna.flask.Cache.get}"
+  ],
+  "Overrides{src.vanna.flask.MemoryCache.get_all}": [
+    "Overrides{src.vanna.flask.Cache.get_all}"
+  ],
+  "Overrides{src.vanna.flask.MemoryCache.set}": [
+    "Overrides{src.vanna.flask.Cache.set}"
+  ],
+  "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.add_ddl}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_ddl}"
+  ],
+  "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.add_documentation}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_documentation}"
+  ],
+  "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.add_question_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_question_sql}"
+  ],
+  "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.get_related_ddl}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_ddl}"
+  ],
+  "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.get_related_documentation}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_documentation}"
+  ],
+  "Overrides{src.vanna.marqo.marqo.Marqo_VectorStore.get_similar_question_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_similar_question_sql}"
+  ],
+  "Overrides{src.vanna.mistral.mistral.Mistral.assistant_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.assistant_message}"
+  ],
+  "Overrides{src.vanna.mistral.mistral.Mistral.generate_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.generate_sql}"
+  ],
+  "Overrides{src.vanna.mistral.mistral.Mistral.submit_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.submit_prompt}"
+  ],
+  "Overrides{src.vanna.mistral.mistral.Mistral.system_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.system_message}"
+  ],
+  "Overrides{src.vanna.mistral.mistral.Mistral.user_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.user_message}"
+  ],
+  "Overrides{src.vanna.ollama.ollama.Ollama.assistant_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.assistant_message}"
+  ],
+  "Overrides{src.vanna.ollama.ollama.Ollama.generate_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.generate_sql}"
+  ],
+  "Overrides{src.vanna.ollama.ollama.Ollama.submit_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.submit_prompt}"
+  ],
+  "Overrides{src.vanna.ollama.ollama.Ollama.system_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.system_message}"
+  ],
+  "Overrides{src.vanna.ollama.ollama.Ollama.user_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.user_message}"
+  ],
+  "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.assistant_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.assistant_message}"
+  ],
+  "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.submit_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.submit_prompt}"
+  ],
+  "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.system_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.system_message}"
+  ],
+  "Overrides{src.vanna.openai.openai_chat.OpenAI_Chat.user_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.user_message}"
+  ],
+  "Overrides{src.vanna.remote.VannaDefault.assistant_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.assistant_message}"
+  ],
+  "Overrides{src.vanna.remote.VannaDefault.submit_prompt}": [
+    "Overrides{src.vanna.base.base.VannaBase.submit_prompt}"
+  ],
+  "Overrides{src.vanna.remote.VannaDefault.system_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.system_message}"
+  ],
+  "Overrides{src.vanna.remote.VannaDefault.user_message}": [
+    "Overrides{src.vanna.base.base.VannaBase.user_message}"
+  ],
+  "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_ddl}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_ddl}"
+  ],
+  "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_documentation}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_documentation}"
+  ],
+  "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.add_question_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.add_question_sql}"
+  ],
+  "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_ddl}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_ddl}"
+  ],
+  "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_related_documentation}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_related_documentation}"
+  ],
+  "Overrides{src.vanna.vannadb.vannadb_vector.VannaDB_VectorStore.get_similar_question_sql}": [
+    "Overrides{src.vanna.base.base.VannaBase.get_similar_question_sql}"
+  ],
+  "Overrides{types.GeneratorType.__next__}": [
+    "Overrides{typing.Generator.__next__}"
+  ],
+  "Overrides{typing.Generator.__next__}": [
+    "Overrides{typing.Iterator.__next__}"
+  ],
+  "Overrides{typing.Iterator.__next__}": [
+    "pydantic._internal._generics.LimitedDict.__setitem__",
+    "pydantic.v1.networks.AnyUrl.__repr__",
+    "src.vanna.TrainingPlan.get_summary",
+    "src.vanna.TrainingPlan.remove_item",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat._extract_python_code",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_ddl_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_documentation_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.add_sql_to_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_Chat.ZhipuAI_Chat.get_sql_prompt",
+    "src.vanna.ZhipuAI.ZhipuAI_embeddings.ZhipuAIEmbeddingFunction.__call__",
+    "src.vanna.base.base.VannaBase._extract_python_code",
+    "src.vanna.base.base.VannaBase.add_ddl_to_prompt",
+    "src.vanna.base.base.VannaBase.add_documentation_to_prompt",
+    "src.vanna.base.base.VannaBase.add_sql_to_prompt",
+    "src.vanna.base.base.VannaBase.generate_questions",
+    "src.vanna.base.base.VannaBase.get_sql_prompt",
+    "src.vanna.base.base.VannaBase.get_training_plan_snowflake",
+    "src.vanna.base.base.VannaBase.train",
+    "src.vanna.chromadb.chromadb_vector.ChromaDB_VectorStore.get_training_data",
+    "src.vanna.marqo.marqo.Marqo_VectorStore.__init__",
+    "src.vanna.types.TrainingPlan.get_summary",
+    "src.vanna.types.TrainingPlan.remove_item"
+  ],
+  "Overrides{xml.etree.ElementTree._IterParseIterator.__next__}": [
+    "Overrides{typing.Iterator.__next__}"
+  ]
+}

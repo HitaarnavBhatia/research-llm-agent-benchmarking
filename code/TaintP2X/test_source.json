@@ -1,0 +1,14 @@
+[
+  {
+    "nameWithOwner": "significant-gravitas/AutoGPT",
+    "url": "https://github.com/significant-gravitas/AutoGPT",
+    "version": "v0.5.0",
+    "commit_hash": "af3ebdf6af1704e42254ad07791bf7e1642c43d3"
+  },
+  {
+    "nameWithOwner": "QuivrHQ/quivr",
+    "url": "https://github.com/QuivrHQ/quivr",
+    "version": "0.0.236",
+    "commit_hash": "f8693e223a31f845a41e9d81c3a93139c3c2527d"
+  }
+]
